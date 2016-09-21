@@ -1,0 +1,129 @@
+/*
+===========================================================================================
+Name: EGG boiler program
+Author: Asad Iqbal
+Version: 1.0
+Copyright: Asad Iqbal
+Description:    An egg boiler program to help the user boil different sizes of eggs
+===========================================================================================
+*/
+
+
+#include<stdio.h>
+#include<stdlib.h>
+
+void createMenu(); //createMenu is a user defined function in order to print out the menu for the boiler program
+
+int main(){
+	int c;
+	int i, s;
+	char input;
+	createMenu();
+
+	c=getch();
+
+	printf("\n");
+
+	if(c==49){
+		printf("You selected Small.\n");
+		printf("Press s to start timer for 1min.\n");
+		input=getch();
+
+		if(input == 's'){
+		i=0,s=0;
+		for(i=0;i<6300;i++){/*try nesting*/ //Using i<6300 for the 1 minute mark in the program
+			system("cls");
+			printf("%i",s);
+			if(i%105==0){/* % returns remainder*/
+				s++;
+			}
+		}
+
+		system("cls");
+		printf("Time Elapsed:1 minute(60 seconds)\n");
+		printf("SMALL size egg has been boiled\n");
+		input = getch();
+
+	}  /*End input s*/
+		else{
+		/*if not s*/
+		}
+	}/*end of c == 1*/
+
+	if(c==50){
+		printf("You selected Medium.\n");
+		printf("Press s to start timer for 2min.\n");
+		input=getch();
+
+
+		if(input == 's'){
+		i=0,s=0;
+		for(i=0;i<12600;i++){/*try nesting*/ //Using i<12600 for the 2 minute mark in the program
+			system("cls");
+			printf("%i",s);
+			if(i%105==0){/* % returns remainder*/
+				s++;
+			}
+		}
+
+		system("cls");
+		printf("Time Elapsed:2 minutes (120 seconds)\n");
+		printf("MEDIUM size egg has been boiled\n");
+		input = getch();
+
+	}   /*End input s*/
+		else{
+		/*if not s*/
+		}
+	}/*end of c == 1*/
+
+	if(c==51){
+		printf("You selected Large.\n");
+		printf("Press s to start timer for 3min.\n");;
+		input=getch();
+
+
+	if(input == 's'){
+		i=0,s=0;
+		for(i=0;i<18900;i++){ //Using i<18900 for the 3 minute mark in the program
+			system("cls");
+			printf("%i",s);
+			if(i%105==0){/* % returns remainder*/
+				s++;
+			}
+		}
+
+		system("cls");
+		printf("Time Elapsed:3 minutes (180 seconds)\n");
+		printf("LARGE size egg has been boiled\n");
+		input = getch();
+
+	}   /*End input s*/
+		else{
+		/*if not s*/
+		}
+	}/*end of c == 1*/
+
+	return 0;
+}
+
+void createMenu(){ //Custom menu which was declared globally before the main function
+                    // Can also use this in a separate file with createMenu.h and import it into the .c file by creating a
+                    // custom library #include "createMenu.h" instead of having it placed here for more clarity in code
+
+    puts("O-O-O-O-O-O-O-O-O-O-O-O-O-O-O-O-O-O-O-O-O-O-O-O-O-O-O\n");
+    puts("\n");
+	printf("                EGG Boiler Program                 \n");
+	puts("\n");
+    puts("O-O-O-O-O-O-O-O-O-O-O-O-O-O-O-O-O-O-O-O-O-O-O-O-O-O-O\n");
+    printf("   copyright.2016.zain software develeopment\n");
+	puts("\n");
+	puts("-----------------------------------------------------\n");
+	printf(" 1 - Small\n");
+	printf(" 2 - Medium\n");
+	printf(" 3 - Large\n");
+	puts("\n");
+	printf("Please select option by option number: ");
+
+}
+
