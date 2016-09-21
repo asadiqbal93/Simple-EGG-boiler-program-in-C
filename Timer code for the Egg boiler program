@@ -1,0 +1,51 @@
+/*
+===========================================================================================
+Name: EGG boiler program
+Author: Asad Iqbal
+Version: 1.0
+Copyright: Asad Iqbal
+Description:                A program that has ten seconds delay. The timer shall start
+                            upon user strike the key 's' and print a message upon one minute is
+                            is expired. Use nested for-loop to construct the delay.
+===========================================================================================
+*/
+
+#include<stdio.h>
+#include<stdlib.h>
+
+
+int main() {
+	char input;
+	int i,s;
+	printf("Press s to start timer\n");
+	input = getch();
+
+	if(input == 's'){
+		i=0,s=0;
+		for(i=0;i<6300;i++){/*Already achieving delay with single nest , Don't see the point of adding another "for"*/
+			system("cls");
+			printf("%i",s);
+			if(i%105==0){/*% returns remainder*/
+				s++;
+			}
+		}
+
+		system("cls");
+		printf("End of 1 minute (60 seconds)");
+		input = getch();
+
+	}
+	else {
+
+		printf("Wrong Input\n");
+		return 0;
+
+
+	}
+
+	return 0;
+
+
+
+}
+
